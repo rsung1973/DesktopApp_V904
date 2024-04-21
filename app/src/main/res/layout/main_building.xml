@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_bkg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/main_bkg">
+
+    <TextView
+        android:id="@+id/call_center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:maxLines="1"
+        android:paddingBottom="5dp"
+        android:text="中興保全 服務電話：0800-669-668 處理單位代碼：E-22"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:weightSum="100"
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/footer"
+        android:layout_below="@id/call_center"
+        android:gravity="fill">
+
+        <LinearLayout
+            android:id="@+id/part0"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="75"
+            android:orientation="horizontal"
+            android:weightSum="1000">
+
+            <LinearLayout
+                android:id="@+id/part00"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="200"
+                android:weightSum="300"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/part000"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="100"
+                    android:orientation="vertical">
+                    <com.dnake.widget.Button2
+                        android:id="@+id/main_quick_talk"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@drawable/main_quick_talk"
+                        android:gravity="bottom|left"
+                        android:paddingLeft="10dp"
+                        android:paddingBottom="10dp"
+                        android:text="@string/main_quick_talk"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/part001"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="100"
+                    android:orientation="vertical">
+                    <com.dnake.widget.Button2
+                        android:id="@+id/main_quick_security"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/main_quick_security"
+                        android:gravity="bottom|left"
+                        android:paddingLeft="10dp"
+                        android:paddingBottom="10dp"
+                        android:text="@string/main_quick_security"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/part002"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="100"
+                    android:orientation="vertical">
+                    <com.dnake.widget.Button2
+                        android:id="@+id/main_quick_smart"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/main_quick_smart"
+                        android:gravity="bottom|left"
+                        android:paddingLeft="10dp"
+                        android:paddingBottom="10dp"
+                        android:text="@string/main_quick_smart"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/part01"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="650"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:id="@+id/main_time_bkg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/main_time_bkg_20210804">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/main_time_anchor"
+                        android:layout_centerHorizontal="false"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginRight="40dp"
+                        android:layout_marginBottom="0dp">
+
+                        <TextView
+                            android:id="@+id/main_time_year"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="年"
+                            android:textColor="#000000"
+                            android:textSize="30sp" />
+
+                        <TextView
+                            android:id="@+id/main_time_month"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="月"
+                            android:textColor="#000000"
+                            android:textSize="30sp" />
+
+                        <TextView
+                            android:id="@+id/main_time_day"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="日"
+                            android:textColor="#000000"
+                            android:textSize="30sp" />
+
+                        <TextView
+                            android:id="@+id/main_time_week"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="星期"
+                            android:textColor="#000000"
+                            android:textSize="30sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/main_time_anchor"
+                        android:layout_centerHorizontal="false"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginBottom="40dp">
+
+                        <TextView
+                            android:id="@+id/main_time_hour"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="时"
+                            android:textColor="#000000"
+                            android:textSize="40sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/main_time_min"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="分"
+                            android:textColor="#000000"
+                            android:textSize="40sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/main_time_anchor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true" />
+                </RelativeLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/part02"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="150"
+                android:weightSum="100"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:id="@+id/part020"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="100"
+                    android:weightSum="300"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:id="@+id/part0200"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="100"
+                        android:orientation="vertical">
+                        <com.dnake.widget.Button2
+                            android:id="@+id/main_quick_apps"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/main_quick_apps"
+                            android:gravity="bottom|center"
+                            android:paddingBottom="5dp"
+                            android:text="@string/main_quick_apps"
+                            android:textColor="#FFFFFF"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/part0201"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="100"
+                        android:orientation="vertical">
+                        <com.dnake.widget.Button2
+                            android:id="@+id/main_quick_alert"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/main_quick_sos"
+                            android:gravity="bottom|center"
+                            android:paddingBottom="5dp"
+                            android:text="@string/main_quick_sos"
+                            android:textColor="#FFFFFF"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/part0202"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="100"
+                        android:orientation="vertical">
+                        <com.dnake.widget.Button2
+                            android:id="@+id/main_quick_cloud"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:background="@drawable/main_quick_cloud"
+                            android:gravity="bottom|center"
+                            android:paddingBottom="5dp"
+                            android:text="@string/main_quick_cloud"
+                            android:textColor="#FFFFFF"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/part021"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0"
+                    android:weightSum="300"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+                    <LinearLayout
+                        android:id="@+id/part0210"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="100"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/part0211"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="100"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/part0212"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="100"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/part1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:weightSum="1000"
+            android:layout_weight="25">
+            <LinearLayout
+                android:id="@+id/part10"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="200"
+                android:background="@drawable/main_quick_smart_blank"
+                android:orientation="vertical">
+                <com.dnake.widget.Button2
+                    android:id="@+id/main_quick_elev"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/main_quick_elev"
+                    android:gravity="bottom|left"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:text="@string/main_quick_elev"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:visibility="gone"/>
+
+                <com.dnake.widget.Button2
+                    android:id="@+id/main_quick_logs"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/main_event_log"
+                    android:gravity="bottom|left"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:text="保全歷史記錄"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:visibility="gone"/>
+
+                <com.dnake.widget.Button2
+                    android:id="@+id/main_taiwan_taix"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/taiwan_taxi"
+                    android:gravity="bottom|left"
+                    android:paddingLeft="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:visibility="gone" />
+                <com.dnake.widget.Button2
+                    android:id="@+id/main_quick_onoff"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/main_quick_onoff_wide"
+                    android:gravity="bottom|left"
+                    android:paddingLeft="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="@string/main_quick_onoff"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/part11"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="220"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:id="@+id/main_prompt_sms"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/main_prompt_sms">
+
+                    <TextView
+                        android:id="@+id/main_prompt_sms_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:singleLine="true"
+                        android:text="@string/main_prompt_no_sms"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/part12"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="140"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:id="@+id/main_prompt_msg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/main_prompt_msg">
+
+                    <TextView
+                        android:id="@+id/main_prompt_msg_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="5dp"
+                        android:singleLine="true"
+                        android:text="@string/main_prompt_no_msg"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/part13"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="140"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:id="@+id/main_prompt_talk"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/main_prompt_talk">
+
+                    <TextView
+                        android:id="@+id/main_prompt_talk_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="5dp"
+                        android:singleLine="true"
+                        android:text="@string/main_prompt_no_missed"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/part14"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="300"
+                android:weightSum="100"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:id="@+id/part140"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="50"
+                    android:orientation="horizontal">
+                    <com.dnake.widget.Button2
+                        android:id="@+id/main_quick_monitor"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/main_quick_monitor"
+                        android:gravity="bottom|center"
+                        android:paddingBottom="5dp"
+                        android:text="@string/main_quick_monitor"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        android:visibility="gone"/>
+                    <com.dnake.widget.Button2
+                        android:id="@+id/main_quick_secom"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/main_quick_secom"
+                        android:gravity="bottom|center"
+                        android:paddingBottom="5dp"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/part141"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="50"
+                    android:orientation="horizontal"
+                    android:background="@drawable/main_quick_bkg">
+                    <com.dnake.widget.Button2
+                        android:id="@+id/main_quick_contacts"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/main_quick_contacts"
+                        android:gravity="bottom|center"
+                        android:paddingBottom="5dp"
+                        android:text="@string/main_quick_contacts"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp" />
+                    <RelativeLayout
+                        android:id="@+id/main_weather"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/main_weather"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/textView1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginBottom="5dp"
+                            android:text="@string/main_quick_weather"
+                            android:textColor="#FFFFFF"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/main_weather_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_toRightOf="@+id/main_weather_icon"
+                            android:textColor="#FFFFFF"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/main_weather_text2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/main_weather_text"
+                            android:layout_toRightOf="@+id/main_weather_icon"
+                            android:textColor="#FFFFFF"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/main_weather_text3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/main_weather_text2"
+                            android:layout_toRightOf="@+id/main_weather_icon"
+                            android:textColor="#FFFFFF"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/main_weather_pm25"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/main_weather_text3"
+                            android:layout_toRightOf="@+id/main_weather_icon"
+                            android:textColor="#FFFFFF"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/main_weather_quality"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/main_weather_pm25"
+                            android:layout_toRightOf="@+id/main_weather_icon"
+                            android:textColor="#FFFFFF"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:id="@+id/main_weather_icon"
+                            android:layout_width="145dp"
+                            android:layout_height="80dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:src="@drawable/main_weather_w1" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:id="@+id/main_logo"
+            android:layout_width="180dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/main_logo_awtek"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+</RelativeLayout>
